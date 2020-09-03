@@ -1,0 +1,318 @@
+html,body{
+  margin: auto;  /*centers the content on the page*/
+  padding: 0; 
+  position: relative;
+  font-family: Palatino, 'Palatino Linotype', serif;
+}
+
+body{
+  min-width: 510px;
+  max-width: 960px;
+  border-color: gray;
+  border-style: solid;
+  border-width: 9px 280px 7px 280px;
+}
+
+h1, h2, h3{
+  font-family: "Lucida Sans Unicode", sans-serif;
+  color: #163192;
+  margin: 0px 0px 5px 10px;
+}
+
+.contents ul {
+  list-style-type: none;
+  text-align: right; /* aligns menu text content on the right side */
+  min-width: 450px;
+}
+
+.contents{
+  background-color: #163192;
+  overflow: hidden;
+  height: 55px; /* height of the menu bar */
+}
+
+.content-element{
+  display: inline; /* displays menu bar contents in one line */
+}
+
+.content-element a {
+  color: white;
+  text-decoration: none;
+  background-color: #163192;
+  padding: 12px;
+  margin: 5px;
+}
+
+li a:hover {
+  background-color: #1d98f4; /* menu bar contents change colour when the cursor is moved on them */
+}
+
+/* moves the letters and numbers that are supposed to appear when cursor is over "English Braille" to the right side below the menu bar */
+#sub-letters{
+  position: absolute;
+  top: 67px;
+  right: -5px;
+}
+
+#sub-letters a{
+  padding-left: 31px;
+}
+
+#sub-numbers{
+  position: absolute;
+  top: 109px;
+  right: -5px;
+}
+
+/*hides the letters and numbers menu and displays them when the cursor is over "English Braille" */
+.sublist{
+  display: none;
+}
+
+#english-content:hover .sublist{
+  display: block;
+}
+
+h1{
+  display: inline;
+}
+
+/* displays Braille section contents the right way and allows menu bar to be on top of the webpage */	
+.braille{
+  position: absolute;
+  margin-top: 60px;
+  overflow: hidden;
+  width: 100%;
+  border-bottom: 9px solid #163192;
+}
+
+/* imports image and moves it to the right ide */
+.image{
+  content: url(https://internal.cs.ncl.ac.uk/modules/2018-19/csc1026/braille/css/braille.png);
+  float: right;
+  margin: 0px 18px 9px 0px;
+} 
+
+.introduction{
+  margin-top: 120px;
+}
+
+.introduction h2{
+  position: relative;
+  top: -8px;
+}
+
+hr{
+  border: 4px solid #163192;
+}
+
+.history{
+  overflow: auto;
+  height: 450px;
+}
+
+/* empty div to allow the video to float right */
+.empty{
+  float: right;
+  width: 450px;
+  height: 240px;
+  margin: 0px 30px 70px 30px;
+}
+
+/* moves the video to the right place */
+.media{
+  position: absolute;
+  top: 360px;
+  right: 0px;
+  margin: 0px 30px 70px 30px;
+  text-align: center;
+  font-size: 13px;
+  z-index: 2; /* allows the video to stay "on top" of the border image so that it could be played */
+}
+
+/* imports the border image and moves it to the right place */
+.video-border{
+  content: url(https://internal.cs.ncl.ac.uk/modules/2018-19/csc1026/braille/css/460x320-box.png);
+  position: absolute;
+  top: 340px;
+  right: 14px;
+  z-index: 1; /* displays video border "behind" the video to allow the user interaction with the video */
+}
+
+.system{
+  overflow: hidden;
+}
+
+/* moves "System description to the right side and gives the widht to display the text */
+.system-description{
+  float: right;
+  position: relative;
+  right: 55px;
+  width: 45%;
+  top: 30px;
+  margin-left: 10px;
+}
+
+.system-description p{
+  padding-left: 50px;
+  display: block;
+}
+
+.system-media{
+  border: solid 1px #1abddf;
+  width: 50%;
+  padding: 1px;
+  margin: 20px 20px 5px 20px;
+}
+
+/* puts the media content in another div to allow the double border */
+.double-border{
+  border: solid 1px #1abddf;
+  padding: 9px;
+}
+
+/* allows the image to shrink without hiding any of its contents */
+.braille-system{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.symbol-heading{
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.symbol-image{
+  height: 29px;
+  width: 20px;
+}
+
+.symbol{
+  margin: 0;
+  position: relative;
+  font-size: 13px;
+  left: 30px;
+  bottom: 20px;
+  height: 0px;
+}
+
+.image-information{
+  border-bottom: 2px solid #1abddf;
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 13px;
+}
+
+.english-braille{
+  overflow: hidden;
+}
+
+.braille-media{
+  position: relative;
+}
+
+/* empty div that imports the border image and moves it to the right place */
+.braille-border{
+  content: url(https://internal.cs.ncl.ac.uk/modules/2018-19/csc1026/braille/css/420x370-box.png);
+  position: relative;
+  float: right;
+  margin: 0px 10px 30px 20px;
+}
+
+.braille-photos{
+  position: absolute;
+  right: 27px;
+  top: 30px;
+}
+
+/* makes the first words of the list bold */
+.english-braille span{
+  font-weight: bold;
+}
+
+
+.letters img{
+  width: 80px;
+  margin: 0px 11px 0px 11px;
+  display: block;
+  font-size: 0px;
+  padding: 0;
+}
+
+.letter{
+  float: left; /* displays the pictures of the letters in on line */
+  border: 1px solid black;
+  margin: 10px;
+  width: 100px;
+  height: 140px;
+  overflow: hidden;
+  display: block;
+}
+
+.letters{
+  border-bottom: 9px solid #163192;
+  overflow: hidden;
+  padding: 0;	
+}
+
+.letters p{
+  background-color: #163192;
+  color: white;
+  text-transform: uppercase; /* makes the letter description uppercase */
+  font-size: 10px;
+  text-align: center;
+  padding: 6px 0px 6px 0px;
+  position: relative;
+  bottom: 6px;
+  width: 100%;
+}
+
+.numbers{
+  overflow: hidden;
+  margin-right: 40px;
+}
+
+#numbers-heading{
+  margin-top: 10px;
+}
+
+.number{
+  float: left; /* displays the pictures of the numbers in on line */
+  border: 1px solid black;
+  margin: 10px;
+  width: 160px;
+  height: 140px;
+  overflow: hidden;
+}
+
+.numbers p{
+  background-color: #163192;
+  color: white;
+  text-transform: uppercase;
+  font-size: 10px;
+  text-align: center;
+  padding: 1px 1px 1px 1px;
+  position: relative;
+  bottom: 11px;
+}
+
+/* makes the first letter of the number bigger than the rest */
+.first-letter{ 
+  font-size: 170%;
+}
+
+.sources{
+  text-align: right;
+  margin: 10px 10px 18px 0px;
+  font-size: 13px;
+}
+
+/* changes the color of "Letters" and "Numbers" in the headings to red */
+.red{
+  color: #f02c4a;
+}
+
+/* gives margin to the text presented on the webpage */
+.information{
+  margin: 5px 10px 10px 10px;
+}
